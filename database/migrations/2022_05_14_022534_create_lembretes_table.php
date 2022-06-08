@@ -17,6 +17,7 @@ class CreateLembretesTable extends Migration
             $table->id();
             $table->string('titulo')->nullable();
             $table->text('descricao');
+            $table->boolean('status')->nullable();
             $table->timestamps();
         });
     }

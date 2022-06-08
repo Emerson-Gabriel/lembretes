@@ -17,7 +17,8 @@ class Lembrete extends JsonResource
         return [
             'id' => $this->id,
             'titulo' => $this->titulo,
-            'descricao' => $this->descricao
+            'descricao' => $this->descricao,
+            'status' => $this->status
         ];
     }
 }

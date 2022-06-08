@@ -24,6 +24,7 @@ class LembreteController extends Controller
         $lembrete = new Lembrete;
         $lembrete->titulo = $request->input('titulo');
         $lembrete->descricao = $request->input('descricao');
+        $lembrete->status = $request->input('status');
     
         if($lembrete->save()){
           return new LembreteResource($lembrete);
@@ -34,6 +35,7 @@ class LembreteController extends Controller
         $lembrete = Lembrete::findOrFail( $request->id );
         $lembrete->titulo = $request->input('titulo');
         $lembrete->descricao = $request->input('descricao');
+        $lembrete->status = $request->input('status');
     
         if($lembrete->save()){
           return new LembreteResource($lembrete);
